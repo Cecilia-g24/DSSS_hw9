@@ -39,12 +39,11 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 # model with ai
 def main():
-    TOKEN = "7601158234:AAFJtpitbJRuIkHY1uUfZzk7S1KO_kRvYUk"
+    TOKEN = "xxxxx"
     application = Application.builder().token(TOKEN).build()
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo)
     application.run_polling()
-    print("Bot 已启动！按 Ctrl+C 停止。")
 
 if __name__ == "__main__":
     main()
